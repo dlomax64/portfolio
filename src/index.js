@@ -7,9 +7,9 @@ import App from './Components/App/App';
 import reportWebVitals from './Utils/reportWebVitals';
 
 render(
-  <Router>
+  <>
     <App />
-  </Router>,
+  </>,
   document.getElementById('root')
 );
 
