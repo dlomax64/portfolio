@@ -2,49 +2,67 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Nav,
-  NavLink,
-  NavItem,
+  Link,
   Navbar,
-  NavbarBrand,
   Container,
 } from 'react-bootstrap';
 
-  const Header = () => {
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      curPage: 'home'
+    }
+  }
+
+  componentDidMount() {
+    let curPage = window.location.href.split('/');
+    console.log(curPage);
+    this.setState({ curPage: curPage[4] });
+  }
+
+  shouldComponentUpdate() {
+    console.log(this.state.curPage);
+    return true;
+  }
+
+  render() {
     return (
       <>
         <Navbar
           bg='dark'
           variant='dark'
+          collapseOnSelect
+          expand="lg"
         >
           <Container>
-            <NavbarBrand href='/'>Dylan Lomax</NavbarBrand>
+            <Navbar.Brand href='/'>Dylan Lomax</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" /> 
               <Nav className='me-auto'>
-                <NavItem> {/* ABOUT ME */}
-                  <NavLink href='about'>
+                  <Nav.Link href='/'>
+                    <span className='nav-link-inner--text'>Home</span>
+                  </Nav.Link>
+                  <Nav.Link href='about'>
                     <span className='nav-link-inner--text'>About Me</span>
-                  </NavLink>
-                </NavItem>
-                <NavItem> {/* CONTACT */}
-                  <NavLink href='contact'> 
+                  </Nav.Link>
+                  <Nav.Link href='contact'> 
                     <span className='nav-link-inner--text'>Contact</span>
-                  </NavLink>
-                </NavItem>
+                  </Nav.Link>
               </Nav>
               <Nav>
-                <NavItem> {/* GITHUB */}
-                  <NavLink href='https://www.github.com/dlomax64' target='_blank'>
+                  <Nav.Link href='https://www.github.com/dlomax64' target='_blank'>
                     {/*<FontAwesomeIcon icon={["fab", "github"]}/>*/}
                     GitHub
-                  </NavLink>
-                </NavItem>
-                <NavItem> {/* LINKEDIN */}
-                  <NavLink href='https://www.linkedin.com/in/dlomax/' target='_blank'>LinkedIn</NavLink>
-                </NavItem>
+                  </Nav.Link>
+                  <Nav.Link href='https://www.linkedin.com/in/dlomax/' target='_blank'>
+                    LinkedIn
+                  </Nav.Link>
               </Nav>
           </Container>
         </Navbar>
       </>
     )
   }
+}
 
 export default Header;
