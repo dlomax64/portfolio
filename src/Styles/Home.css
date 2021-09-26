@@ -1,0 +1,55 @@
+.Home {
+  background-color: #5bccf6;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  overflow-x: hidden;
+  color: black;
+}
+
+#intro h1 {
+  font-size: 10rem;
+  font-weight: 600;
+  color: black;
+}
+
+#intro h2 {
+  font-size: 5rem;
+}
+
+#intro h3 {
+  font-size: 1.8rem;
+}
+
+.highlight {
+  font-style: normal;
+  color: #fcde67;
+}
+
+#intro {
+  position: absolute;
+  top: 40vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding-left: 7%;
+  padding-right: 5%;
+  width: 60%;
+}
+
+#particles {
+  height: 100%;
+  width: 100%;
+  
+}
+
+#wave {
+  transform: rotate(180deg);
+  left: 0;
+}
+
+.home #wave {
+  height: 85vh;
+  z-index: 5;
+  margin: 0;
+}

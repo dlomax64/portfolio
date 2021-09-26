@@ -1,5 +1,5 @@
-import logo from '../../Assets/logo.svg';
-import '../../Styles/Contact/Contact.css';
+import logo from '../Assets/logo.svg';
+import '../Styles/Contact.css';
 
 const Contact = () => {
   return (

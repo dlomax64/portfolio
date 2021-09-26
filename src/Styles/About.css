@@ -1,0 +1,9 @@
+.About {
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+

@@ -1,0 +1,20 @@
+.navbar {
+  position: sticky;
+  z-index: 3;
+  background-color: #5bccf6;
+  padding: 10px 2%;
+}
+
+.nav-link {
+  color: black !important;
+  opacity: 50% !important;
+}
+
+.navbar #brand,
+.nav-link:hover {
+  color: #fcde67 !important;
+  transition: 0.5s;
+}
+.active {
+  color: #fcde67 !important;
+}
