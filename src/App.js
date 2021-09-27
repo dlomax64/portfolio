@@ -21,7 +21,7 @@ const Page = () => {
 
 const App = () => {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Header />
         <Switch>
           <Route exact path='/' component={Page} />
@@ -32,4 +32,3 @@ const App = () => {
 
 export default App;
 
-//        <Router basename={process.env.PUBLIC_URL}>

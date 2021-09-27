@@ -20,7 +20,7 @@ const Home = () => {
         params={{
           "particles": {
                 "number": {
-                        "value": 80,
+                        "value": 150,
                         "density": {
                                   "enable": true,
                                   "value_area": 800
@@ -87,7 +87,7 @@ const Home = () => {
                       }
               },
               "interactivity": {
-                    "detect_on": "canvas",
+                    "detect_on": "window",
                     "events": {
                             "onhover": {
                                       "enable": true,
@@ -133,7 +133,7 @@ const Home = () => {
         paused={false}
         options={{
           height: 20,
-          amplitude: 45,
+          amplitude: 85,
           speed: 0.1,
           points: 5
         }}

@@ -6,4 +6,7 @@
   overflow-x: hidden;
 }
 
+#about_page {
+  mix-blend-mode: multiply;
+}
 
