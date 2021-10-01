@@ -21,12 +21,16 @@ const Page = () => {
 
 const App = () => {
     return (
-      <Router basename={process.env.PUBLIC_URL}>
-        <Header />
-        <Switch>
-          <Route exact path='/' component={Page} />
-        </Switch>
-      </Router>
+      <div className='App'>
+        <Router basename='/'>
+      {/*<Header />*/}
+          <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/about' component={About} />
+            <Route path='/contact' component={Contact} />
+          </Switch>
+        </Router>
+      </div>
     )
   }
 

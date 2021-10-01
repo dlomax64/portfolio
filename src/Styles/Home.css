@@ -1,10 +1,24 @@
 .Home {
-  background-color: transparent;
-  position: relative;
+  background-image: url("../Assets/sungrid.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
+  position: relative;
   z-index: 0;
-  overflow-x: hidden;
-  color: black;
+  color: white;
+  display: table;
+}
+
+#intro {
+  position: absolute;
+  top: 40vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 45%;
 }
 
 #intro h1 {
@@ -26,30 +40,122 @@
   color: #fcde67;
 }
 
-#intro {
-  position: absolute;
-  top: 40vh;
+#wrapper {
+  height: 100%;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+#container {
+  position: relative;
+  vertical-align: middle;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
-  padding-left: 7%;
-  padding-right: 5%;
-  width: 60%;
+  margin: auto;
 }
 
-#particles {
-  height: 100%;
-  width: 100%;
-  background-color: #5bccf6  
+#name {
+  width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-#wave {
-  transform: rotate(180deg);
-  left: 0;
+#title_container {
+  position: absolute;
+  vertical-align: middle;
+  top: 72%;
+  left: 55%;
+  transform: translate(-50%, -50%);
 }
 
-.home #wave {
-  height: 85vh;
-  z-index: 5;
-  margin: 0;
+#title {
+  width: 600px;
+  position: absolute;
+  top: 65%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+
+	animation-name: neon-pink;
+	animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+
+.first {
+	animation-name: neon-pink;
+	animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.last {
+	animation-name: neon-blue;
+	animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes neon-pink {
+  0% {
+    filter: 
+      drop-shadow(0px 0px 1px #fff)
+      drop-shadow(0px 0px 3px #fff)
+      drop-shadow(0px 0px 10px #ff80b3)
+      drop-shadow(0px 0px 30px #ff4d94)
+      drop-shadow(0px 0px 50px #ff0066);
+  }
+
+  100% {
+    filter: 
+      drop-shadow(0px 0px 3px #fff)
+      drop-shadow(0px 0px 6px #fff)
+      drop-shadow(0px 0px 15px #ff80b3)
+      drop-shadow(0px 0px 40px #ff4d94)
+      drop-shadow(0px 0px 60px #ff0066); 
+  }
+}
+
+@keyframes neon-blue {
+  0% {
+    filter: 
+      drop-shadow(0px 0px 1px #fff)
+      drop-shadow(0px 0px 3px #fff)
+      drop-shadow(0px 0px 10px #00cfff)
+      drop-shadow(0px 0px 30px #00bfff)
+      drop-shadow(0px 0px 50px #00afff);
+  }
+
+  100% {
+    filter: 
+      drop-shadow(0px 0px 3px #fff)
+      drop-shadow(0px 0px 6px #fff)
+      drop-shadow(0px 0px 15px #00cfff)
+      drop-shadow(0px 0px 40px #00bfff)
+      drop-shadow(0px 0px 60px #00afff); 
+  }
+}
+
+
+a {
+  position: absolute; 
+  display: inline-block; 
+  padding-bottom: 4px;
+  top: 0.5em; 
+  right: 0.5em;
+  color: #fff; 
+  text-decoration: none;
+  border-bottom: 1px solid #fff; 
+  font-family: monospace; 
+  letter-spacing: 1px;
+  transition: color 0.2s ease-out, border-color 0.2s ease-out; 
+}
+
+a:hover {
+  color: #ff80b3; 
+  border-bottom: 1px solid #ff80b3;
+}
+
+
