@@ -5,6 +5,7 @@ import { Inetcpl1315 } from '@react95/icons/esm/react/Inetcpl1315';
 import { FlyingWindows100 } from '@react95/icons/esm/react/FlyingWindows100';
 import { Shell322 } from '@react95/icons/esm/react/Shell322';
 import { User } from '@react95/icons/esm/react/User';
+import { Pbrush1 } from '@react95/icons/esm/react/Pbrush1';
 
 class Taskbar extends Component {
 	constructor(props) {
@@ -34,6 +35,9 @@ class Taskbar extends Component {
 					</List.Item>
 					<List.Item icon={<User variant="32x32_4" />} onClick={() => this.props.openWindow('about')}>
 					  About 
+					</List.Item>
+					<List.Item icon={<Pbrush1 variant="32x32_4" />} onClick={() => this.props.openWindow('theme')}>
+					  Themes 
 					</List.Item>
 				</List>
 			}
