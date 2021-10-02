@@ -1,4 +1,4 @@
-.Home {
+.Desktop {
   background-image: url("../Assets/sungrid.gif");
   background-repeat: no-repeat;
   background-position: center;
@@ -10,34 +10,6 @@
   z-index: 0;
   color: white;
   display: table;
-}
-
-#intro {
-  position: absolute;
-  top: 40vh;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 45%;
-}
-
-#intro h1 {
-  font-size: 10rem;
-  font-weight: 600;
-  color: black;
-}
-
-#intro h2 {
-  font-size: 5rem;
-}
-
-#intro h3 {
-  font-size: 1.8rem;
-}
-
-.highlight {
-  font-style: normal;
-  color: #fcde67;
 }
 
 #wrapper {
