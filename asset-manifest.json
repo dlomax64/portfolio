@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.e9e3b9b3.chunk.css",
-    "main.js": "/static/js/main.20656917.chunk.js",
-    "main.js.map": "/static/js/main.20656917.chunk.js.map",
+    "main.css": "/static/css/main.f42feea0.chunk.css",
+    "main.js": "/static/js/main.7f80d794.chunk.js",
+    "main.js.map": "/static/js/main.7f80d794.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.d6a1ba0d.js",
     "runtime-main.js.map": "/static/js/runtime-main.d6a1ba0d.js.map",
-    "static/js/2.051778f8.chunk.js": "/static/js/2.051778f8.chunk.js",
-    "static/js/2.051778f8.chunk.js.map": "/static/js/2.051778f8.chunk.js.map",
+    "static/js/2.003dd962.chunk.js": "/static/js/2.003dd962.chunk.js",
+    "static/js/2.003dd962.chunk.js.map": "/static/js/2.003dd962.chunk.js.map",
     "static/js/3.de213068.chunk.js": "/static/js/3.de213068.chunk.js",
     "static/js/3.de213068.chunk.js.map": "/static/js/3.de213068.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.e9e3b9b3.chunk.css.map": "/static/css/main.e9e3b9b3.chunk.css.map",
-    "static/js/2.051778f8.chunk.js.LICENSE.txt": "/static/js/2.051778f8.chunk.js.LICENSE.txt",
+    "static/css/main.f42feea0.chunk.css.map": "/static/css/main.f42feea0.chunk.css.map",
+    "static/js/2.003dd962.chunk.js.LICENSE.txt": "/static/js/2.003dd962.chunk.js.LICENSE.txt",
     "static/media/MS-Sans-Serif.eot": "/static/media/MS-Sans-Serif.30dfad5d.eot",
     "static/media/MS-Sans-Serif.woff2": "/static/media/MS-Sans-Serif.4fb9ed0f.woff2",
     "static/media/MS-Sans-Serif.woff": "/static/media/MS-Sans-Serif.82eeac7b.woff",
@@ -22,14 +22,13 @@
     "static/media/React95Video-Numbers.woff": "/static/media/React95Video-Numbers.cc52603d.woff",
     "static/media/check-disabled.svg": "/static/media/check-disabled.6c74515b.svg",
     "static/media/check.svg": "/static/media/check.cab94f08.svg",
-    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
     "static/media/rightcaret.4316e9ff.svg": "/static/media/rightcaret.4316e9ff.svg",
     "static/media/Desktop.css": "/static/media/sungrid.1777c27d.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.d6a1ba0d.js",
-    "static/js/2.051778f8.chunk.js",
-    "static/css/main.e9e3b9b3.chunk.css",
-    "static/js/main.20656917.chunk.js"
+    "static/js/2.003dd962.chunk.js",
+    "static/css/main.f42feea0.chunk.css",
+    "static/js/main.7f80d794.chunk.js"
   ]
 }
