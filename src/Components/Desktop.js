@@ -1,12 +1,4 @@
 import { Component } from 'react';
-import { 
-  Modal,
-  List, 
-  Frame, 
-  Dropdown, 
-  Fieldset,
-  Button
-} from '@react95/core';
 
 import Taskbar from './Taskbar';
 import About from './About';
