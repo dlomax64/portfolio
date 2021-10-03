@@ -4,52 +4,28 @@
   background-position: center;
   background-size: cover;
   min-height: 100vh;
-  height: 100%;
-  width: 100%;
   position: relative;
+  width: 100%;
   z-index: 0;
   color: white;
-  display: table;
 }
 
-#wrapper {
-  height: 100%;
-  vertical-align: middle;
-  display: table-cell;
-}
-
-#container {
-  position: relative;
-  vertical-align: middle;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: auto;
+.Desktop * {
+  z-index: 1;
 }
 
 #name {
-  width: 700px;
+  z-index: 0;
+  width: auto;
+  height: auto;
+  max-width: 800px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-#title_container {
-  position: absolute;
-  vertical-align: middle;
-  top: 72%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-}
-
-#title {
-  width: 600px;
-  position: absolute;
-  top: 65%;
-  left: 55%;
-  transform: translate(-50%, -50%);
-
+.title {
 	animation-name: neon-pink;
 	animation-duration: 0.8s;
   animation-iteration-count: infinite;
@@ -110,7 +86,6 @@
   }
 }
 
-
 a {
   position: absolute; 
   display: inline-block; 
@@ -129,5 +104,3 @@ a:hover {
   color: #ff80b3; 
   border-bottom: 1px solid #ff80b3;
 }
-
-

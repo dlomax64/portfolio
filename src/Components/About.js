@@ -1,14 +1,8 @@
-import { Component } from 'react';
 import { Modal, Frame } from '@react95/core';
 import { InfoBubble } from '@react95/icons/esm/react/InfoBubble';
 import '../Styles/About.css';
 
-class About extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  AboutContent() {
+const AboutContent = () => {
     return (
       <div className='About'>
         <div id='about_page'>
@@ -22,11 +16,11 @@ class About extends Component {
         </div>
       </div>
     )
-  }
+}
 
-  AboutWindow() {
+const AboutWindow = (props)  => {
     return (
-      <Modal
+      <Modal style={{ fontSize: '.8em' }}
         height='400'
         width='600'
         title='About'
@@ -34,7 +28,7 @@ class About extends Component {
           x:300,
           y:100,
         }}
-        closeModal={() => this.props.closeWindow('about')}
+        closeModal={() => props.closeWindow('about')}
         icon={<InfoBubble />}
         menu={[
           { name: 'File', list:[] },
@@ -42,19 +36,18 @@ class About extends Component {
           { name: 'Help', list:[] },
         ]}>
         <Frame height='100%' boxShadow='in' bg='white'>
-          {this.AboutContent()}  
+          {AboutContent()}  
         </Frame>
       </Modal> 
     )
-  }
+}
   
-  render() {
+const About = (props) => {
     return (
       <>
-        {this.AboutWindow()}
+        {AboutWindow(props)}
       </>
     )
-  }
 }
 
 export default About;

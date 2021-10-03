@@ -1,23 +1,26 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from '@react95/core';
 import './Styles/App.css';
 
-import Taskbar from './Components/Taskbar';
 import Desktop from './Components/Desktop';
-import About from './Components/About';
-import Contact from './Components/Contact';
+import CRT from './Components/CRT';
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state = JSON.parse(window.localStorage.getItem('state')) || {
       theme: ''
     }
     this.changeTheme = this.changeTheme.bind(this);
   }
 
+  setState(state) {
+    window.localStorage.setItem('state', JSON.stringify(state));
+    super.setState(state);
+  }
+
   changeTheme(e) {
+    console.log(e.target);
     this.setState({ theme: e.target.value });
   }
 
@@ -25,6 +28,7 @@ class App extends Component {
     let { theme } = this.state;
     return (
       <div className='App'>
+        <CRT />
           <ThemeProvider theme={theme}>
             <Desktop changeTheme={this.changeTheme}/>
           </ThemeProvider>
