@@ -2,6 +2,7 @@ import { Component } from 'react';
 
 import Taskbar from './Taskbar';
 import About from './About';
+import Resume from './Resume';
 import ThemeWindow from './ThemeWindow';
 
 import FirstName from '../Assets/FirstName.js';
@@ -16,6 +17,7 @@ class Desktop extends Component {
     this.state = {
       aboutIsOpen: false,
       contactIsOpen: false,
+      resumeIsOpen: false,
       themeIsOpen: false,
     }
     this.openWindow = this.openWindow.bind(this);
@@ -24,7 +26,7 @@ class Desktop extends Component {
 
   openWindow(win) {
     let toOpen = win + 'IsOpen';
-    this.setState({ [toOpen]: true });
+    this.setState({ [toOpen]: true, focused: win });
   }
 
   closeWindow(win) {
@@ -32,14 +34,14 @@ class Desktop extends Component {
     this.setState({ [toClose]: false });
   }
 
-
   render() {
-    let { aboutIsOpen, contactIsOpen, themeIsOpen } = this.state;
+    let { aboutIsOpen, contactIsOpen, resumeIsOpen, themeIsOpen } = this.state;
     console.log("Just rendered!");
     return (
       <div className="Desktop">
-        {aboutIsOpen && <About closeWindow={this.closeWindow} />}
-        {themeIsOpen && <ThemeWindow closeWindow={this.closeWindow} changeTheme={this.props.changeTheme} />}
+        {aboutIsOpen && <About closeWindow={this.closeWindow} /> }
+        {resumeIsOpen && <Resume closeWindow={this.closeWindow} /> }
+        {themeIsOpen && <ThemeWindow closeWindow={this.closeWindow} changeTheme={this.props.changeTheme}/> }
         <Taskbar 
           openWindow = {this.openWindow}
         />

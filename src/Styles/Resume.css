@@ -1,4 +1,4 @@
-.About {
+.Resume {
   background-color: transparent;
   position: relative;
   color: black;
@@ -7,12 +7,13 @@
   font-size: 1.6em;
 }
 
-#about {
-  height: 800px;
-  min-width: 460px;
+#resume {
+  height: auto;
+  min-height: 800px;
+  min-width: 845px;
 }
 
-#about:disabled {
+#resume:disabled {
   background: white;
   color: black;
 }

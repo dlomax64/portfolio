@@ -1,18 +1,15 @@
 import { Modal, Frame } from '@react95/core';
 import { InfoBubble } from '@react95/icons/esm/react/InfoBubble';
+import about from '../Assets/about.js';
 import '../Styles/About.css';
 
+
 const AboutContent = () => {
+    const document = about;
     return (
       <div className='About'>
         <div id='about_page'>
-          <h1> Hello, my name is Dylan Lomax </h1>
-          <p> I am a senior Computer Science student at The University of Tennessee.
-              I will graduate in May 2022 and am currently looking for a job post-graduation.
-              I am most interested in Web Development.
-          </p>
-          <p><em><b>Please note that this site is still being built, this page is a placeholder.</b></em></p>
-          <h3> Thanks for viewing my website! I am having a lot of fun building it! </h3>
+          <textarea id='about' disabled defaultValue={document} />
         </div>
       </div>
     )
@@ -20,9 +17,9 @@ const AboutContent = () => {
 
 const AboutWindow = (props)  => {
     return (
-      <Modal style={{ fontSize: '.8em' }}
-        height='400'
-        width='600'
+      <Modal style={{ fontSize: '.8em', overflowX: 'scroll'}}
+        height='auto'
+        width='auto'
         title='About'
         defaultPosition={{
           x:300,

@@ -5,6 +5,7 @@ import { FlyingWindows100 } from '@react95/icons/esm/react/FlyingWindows100';
 import { Shell322 } from '@react95/icons/esm/react/Shell322';
 import { User } from '@react95/icons/esm/react/User';
 import { Pbrush1 } from '@react95/icons/esm/react/Pbrush1';
+import { Sendmail2001 } from '@react95/icons/esm/react/Sendmail2001';
 
 const Taskbar = (props) => {
 
@@ -18,18 +19,27 @@ const Taskbar = (props) => {
 		<TaskBar 
 			list={
 				<List>
+					<List.Item 
+            as='a'
+            href='mailto:dylan@dlomax.net'
+            icon={<Sendmail2001 variant="32x32_4" />}
+            target='_blank'
+          >
+					    Contact 
+					</List.Item>
+					<List.Item icon={<Shell322 variant="32x32_4" />} onClick={() => props.openWindow('resume')}>
+					  Resume 
+					</List.Item>
+					<List.Item icon={<User variant="32x32_4" />} onClick={() => props.openWindow('about')}>
+					  About 
+					</List.Item>
 					<List.Item icon={<Inetcpl1315 />} onClick={(e) => onClick(e, 'https://github.com/dlomax64')}>
 						Github
 					</List.Item>
 					<List.Item icon={<FlyingWindows100 variant="32x32_4" />} onClick={(e) => onClick(e, 'https://linkedin.com/in/dlomax')}>
 					  Linkedin
 					</List.Item>
-					<List.Item icon={<Shell322 variant="32x32_4" />} onClick={(e) => onClick(e, 'https://www.dropbox.com/s/da87txed4n69c1r/lomax_dylan_CV.pdf?dl=0')}>
-					  Resume 
-					</List.Item>
-					<List.Item icon={<User variant="32x32_4" />} onClick={() => props.openWindow('about')}>
-					  About 
-					</List.Item>
+          <List.Divider />
 					<List.Item icon={<Pbrush1 variant="32x32_4" />} onClick={() => props.openWindow('theme')}>
 					  Themes 
 					</List.Item>
