@@ -1,15 +1,5 @@
-.About {
-  background-color: transparent;
-  position: relative;
-  color: black;
-  overflow-x: hidden;
-  padding: 5px;
-  font-size: 1.6em;
-}
-
 #about {
-  height: 800px;
-  min-width: 460px;
+  resize: vertical;
 }
 
 #about:disabled {

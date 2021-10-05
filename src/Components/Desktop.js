@@ -1,56 +1,29 @@
 import { Component } from 'react';
 
+import { Inetcpl1315 } from '@react95/icons/esm/react/Inetcpl1315';
+import { FlyingWindows100 } from '@react95/icons/esm/react/FlyingWindows100';
+import { Shell322 } from '@react95/icons/esm/react/Shell322';
+import { User } from '@react95/icons/esm/react/User';
+import { Pbrush1 } from '@react95/icons/esm/react/Pbrush1';
+import { Sendmail2001 } from '@react95/icons/esm/react/Sendmail2001';
+
 import Taskbar from './Taskbar';
-import About from './About';
-import Resume from './Resume';
-import ThemeWindow from './ThemeWindow';
 
 import FirstName from '../Assets/FirstName.js';
 import LastName from '../Assets/LastName.js';
 import Title from '../Assets/Title.js';
 import '../Styles/Desktop.css';
 
-
-class Desktop extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      aboutIsOpen: false,
-      contactIsOpen: false,
-      resumeIsOpen: false,
-      themeIsOpen: false,
-    }
-    this.openWindow = this.openWindow.bind(this);
-    this.closeWindow = this.closeWindow.bind(this);
-  }
-
-  openWindow(win) {
-    let toOpen = win + 'IsOpen';
-    this.setState({ [toOpen]: true, focused: win });
-  }
-
-  closeWindow(win) {
-    let toClose = win + 'IsOpen';
-    this.setState({ [toClose]: false });
-  }
-
-  render() {
-    let { aboutIsOpen, contactIsOpen, resumeIsOpen, themeIsOpen } = this.state;
-    console.log("Just rendered!");
+const Desktop = (props) => {
+    console.log("Desktop rendered!");
     return (
       <div className="Desktop">
-        {aboutIsOpen && <About closeWindow={this.closeWindow} /> }
-        {resumeIsOpen && <Resume closeWindow={this.closeWindow} /> }
-        {themeIsOpen && <ThemeWindow closeWindow={this.closeWindow} changeTheme={this.props.changeTheme}/> }
-        <Taskbar 
-          openWindow = {this.openWindow}
-        />
-          <FirstName id="name" className="first" stroke="#fff"/>
-          <LastName className="last" id="name" stroke="#fff"/>
-          <Title id="name" className="title" stroke="#fff"/>
+        <FirstName id="name" className="first" stroke="#fff"/>
+        <LastName className="last" id="name" stroke="#fff"/>
+        <Title id="name" className="title" stroke="#fff"/>
+        <Taskbar changeTheme={props.changeTheme}/>
       </div>
     )
   }
-}
 
 export default Desktop;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { ThemeProvider } from '@react95/core';
 import './Styles/App.css';
 
@@ -38,4 +38,3 @@ class App extends Component {
 }
 
 export default App;
-

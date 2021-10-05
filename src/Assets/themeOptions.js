@@ -36,3 +36,5 @@ const themeOptions = [
   'lilacRoseDark',
   'violetDark'
 ];
+
+export default themeOptions;

@@ -1,16 +1,5 @@
-.Resume {
-  background-color: transparent;
-  position: relative;
-  color: black;
-  overflow-x: hidden;
-  padding: 5px;
-  font-size: 1.6em;
-}
-
 #resume {
-  height: auto;
-  min-height: 800px;
-  min-width: 845px;
+  resize: vertical;
 }
 
 #resume:disabled {
