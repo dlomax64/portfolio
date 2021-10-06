@@ -1,37 +1,26 @@
 import React from 'react';
 import styled from '@xstyled/styled-components';
-import { 
-  TaskBar, 
-  List,
-  Modal,
-  Frame,
-  Fieldset,
-  Dropdown
-} from '@react95/core';
+import { TaskBar, List } from '@react95/core';
 
 import About from './About';
 import Resume from './Resume';
-import VideoPlayer from './VideoPlayer';
-import themeOptions from '../Assets/themeOptions';
+import Theme from './Theme';
 import '../Styles/Taskbar.css'
 
 import { Inetcpl1315 } from '@react95/icons/esm/react/Inetcpl1315';
 import { FlyingWindows100 } from '@react95/icons/esm/react/FlyingWindows100';
 import { Shell322 } from '@react95/icons/esm/react/Shell322';
-import { User } from '@react95/icons/esm/react/User';
 import { Pbrush1 } from '@react95/icons/esm/react/Pbrush1';
 import { Sendmail2001 } from '@react95/icons/esm/react/Sendmail2001';
 import { InfoBubble } from '@react95/icons/esm/react/InfoBubble';
-import { RecycleFull } from '@react95/icons/esm/react/RecycleFull';
-import { FileText } from '@react95/icons/esm/react/FileText';
 
 const IconContainer = styled.button`
-  display: inline-flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 25;
-	min-width: 150px;
+display: inline-flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 25;
+min-width: 150px;
   border: none;
   background-color: transparent;
 
@@ -53,14 +42,10 @@ const Taskbar = (props) => {
   const [aboutIsOpen, toggleAbout] = React.useState(false);
   const [resumeIsOpen, toggleResume] = React.useState(false);
   const [themeIsOpen, toggleTheme] = React.useState(false);
-  const [recycleIsOpen, toggleRecycle] = React.useState(false);
-  const [videoPlayer, toggleVideo] = React.useState(false);
 
   const closeAbout = () => toggleAbout(false);
   const closeResume = () => toggleResume(false);
   const closeTheme = () => toggleTheme(false);
-  const closeRecycle = () => toggleRecycle(false);
-  const closeVideo = () => toggleVideo(false);
 
   const onClick = (e, link) => {
     e.preventDefault();
@@ -69,104 +54,17 @@ const Taskbar = (props) => {
       var mail = document.createElement('a');
       mail.href = 'mailto:dylan@dlomax.net';
       mail.click();
-    }
-      
-    else {
-      var win = window.open(link, '_blank'); 
+    } else {
+      let win = window.open(link, '_blank'); 
       win.focus();
     }
   }
-	console.log(videoPlayer);
 
   return( 
     <>
-    {aboutIsOpen && (
-      <Modal id='window'
-      icon={<InfoBubble />}
-      title='About'
-      closeModal={closeAbout}
-      width='auto'
-      height='auto'
-				menu={[
-            { name: 'File', list:[], },
-            { name: 'Edit', list:[], },
-          ]}
-        > 
-          <Frame height='100%' boxShadow='in' bg='white'>
-            <About />
-          </Frame>
-        </Modal>
-      )}
-
-      {resumeIsOpen && (
-        <Modal id='window'
-          icon={<InfoBubble />}
-          title='Resume'
-          closeModal={closeResume}
-          width='auto'
-          height='auto'
-          buttons={[
-            { value: 'PDF', onClick: (e) => onClick(e, 'https://www.dropbox.com/s/da87txed4n69c1r/lomax_dylan_CV.pdf?dl=0')}
-          ]}
-        > 
-          <Frame height='100%' boxShadow='in' bg='white'>
-            <Resume />
-          </Frame>
-        </Modal>
-      )}
-
-      {themeIsOpen && (
-        <Modal id='window'
-          icon={<InfoBubble />}
-          title='Theme'
-          closeModal={closeTheme}
-          width='auto'
-          height='auto'
-          buttons={[
-            { value: 'OK', onClick: closeTheme}
-          ]}
-        > 
-            <Fieldset legend='Pick a theme' style={{ marginBottom: '1.6em', width: 205, color: 'black' }}>
-              <Dropdown
-								style={{ width: 200 }}
-                options={themeOptions}
-                onChange={(e) => props.changeTheme(e)}
-              />
-            </Fieldset>
-        </Modal>
-      )}
-
-      {recycleIsOpen && (
-        <Modal id='window'
-          icon={<RecycleFull />}
-          title='Recycle Bin'
-          closeModal={closeRecycle}
-          width='auto'
-          height='auto'
-          buttons={[
-            { value: 'OK', onClick: () => toggleVideo(true) } 
-          ]}
-        > 
-          <Frame height='100%' boxShadow='in' bg='white'>
-						<IconContainer onClick={() => toggleVideo(true)} >
-							<FileText variant='32x32_4' />
-							<p><b>SSN.txt</b></p>
-						</IconContainer>
-          </Frame>
-        </Modal>
-      )}
-
-			{videoPlayer && (
-        <Modal id='window'
-          icon={<RecycleFull />}
-          title='Recycle Bin'
-          closeModal={closeVideo}
-          width='auto'
-          height='auto'
-        > 
-					<VideoPlayer />
-        </Modal>
-      )}
+      {aboutIsOpen && <About closeAbout={closeAbout} />} 
+      {resumeIsOpen && <Resume closeResume={closeResume} />}
+      {themeIsOpen && <Theme closeTheme={closeTheme} changeTheme={props.changeTheme} />}
 
 			<div>
 				<IconContainer onClick={toggleAbout}>
@@ -184,12 +82,6 @@ const Taskbar = (props) => {
 				<IconContainer onClick={toggleTheme}>
 					<Pbrush1 variant='32x32_4'/>
 					<p style={{ color: 'white', fontSize: '1.1em' }}><b>Themes</b></p>
-				</IconContainer>
-			</div>
-			<div>
-				<IconContainer >
-					<RecycleFull variant='32x32_4'/>
-					<p style={{ color: 'white', fontSize: '1.1em' }}><b>Recycle Bin</b></p>
 				</IconContainer>
 			</div>
 			<div id='taskbar'>

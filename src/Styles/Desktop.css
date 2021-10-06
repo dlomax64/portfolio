@@ -1,5 +1,8 @@
 .Desktop {
   background-image: url("../Assets/sungrid.gif");
+  /*
+  background-image: url("../Assets/newBG.jpg");
+   */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

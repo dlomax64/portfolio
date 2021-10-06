@@ -1,5 +1,3 @@
-import { Component } from 'react';
-
 import Taskbar from './Taskbar';
 import FirstName from '../Assets/FirstName.js';
 import LastName from '../Assets/LastName.js';
