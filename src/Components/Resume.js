@@ -17,6 +17,10 @@ const Resume = (props) => (
     closeModal={props.closeResume}
     width='auto'
     height='auto'
+    menu={[
+      { name: 'File', list:[] },
+      { name: 'Edit', list:[] },
+    ]}
     buttons={[
       { value: 'PDF', onClick: (e) => onClick(e, 'resume')}
     ]}
