@@ -6,6 +6,7 @@ import About from './About';
 import Resume from './Resume';
 import Theme from './Theme';
 import Minesweeper from './Minesweeper';
+import Winamp from './Winamp';
 import '../Styles/Taskbar.css'
 
 import { Inetcpl1315 } from '@react95/icons/esm/react/Inetcpl1315';
@@ -45,11 +46,13 @@ const Taskbar = (props) => {
   const [resumeIsOpen, toggleResume] = React.useState(false);
   const [themeIsOpen, toggleTheme] = React.useState(false);
   const [minesweeperIsOpen, toggleMinesweeper] = React.useState(false);
+  //const [winampIsOpen, toggleWinamp] = React.useState(false);
 
   const closeAbout = () => toggleAbout(false);
   const closeResume = () => toggleResume(false);
   const closeTheme = () => toggleTheme(false);
   const closeMinesweeper = () => toggleMinesweeper(false);
+  //const closeWinamp = () => toggleWinamp(false);
 
   const onClick = (e, link) => {
     e.preventDefault();
@@ -70,6 +73,7 @@ const Taskbar = (props) => {
       {resumeIsOpen && <Resume closeResume={closeResume} />}
       {themeIsOpen && <Theme closeTheme={closeTheme} changeTheme={props.changeTheme} />}
       {minesweeperIsOpen && <Minesweeper closeMinesweeper={closeMinesweeper} />}
+      {/*winampIsOpen && <Winamp closeWinamp={closeWinamp} />*/}
 
 			<div>
 				<IconContainer onClick={toggleAbout}>
