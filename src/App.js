@@ -1,9 +1,11 @@
 import { Component } from 'react';
-import { ThemeProvider } from '@react95/core';
+import { ThemeProvider, GlobalStyle } from '@react95/core';
 import './Styles/App.css';
+import './Styles/Scanlines.scss';
 
 import Desktop from './Components/Desktop';
 import CRT from './Components/CRT';
+import Scanlines from './Components/Scanlines';
 
 class App extends Component {
   constructor(props) {
@@ -28,10 +30,12 @@ class App extends Component {
     let { theme } = this.state;
     return (
       <div className='App'>
-        <CRT />
+        <div className='scanlines'>
           <ThemeProvider theme={theme}>
+            <GlobalStyle />
             <Desktop changeTheme={this.changeTheme}/>
           </ThemeProvider>
+        </div>
       </div>
     )
   }
