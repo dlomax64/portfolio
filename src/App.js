@@ -22,7 +22,6 @@ class App extends Component {
   }
 
   changeTheme(e) {
-    console.log(e.target);
     this.setState({ theme: e.target.value });
   }
 
@@ -30,12 +29,10 @@ class App extends Component {
     let { theme } = this.state;
     return (
       <div className='App'>
-        <div className='scanlines'>
-          <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <Desktop changeTheme={this.changeTheme}/>
-          </ThemeProvider>
-        </div>
+        <CRT />
+        <ThemeProvider theme={theme}>
+          <Desktop changeTheme={this.changeTheme} />
+        </ThemeProvider>
       </div>
     )
   }
