@@ -6,7 +6,6 @@ import About from './About';
 import Resume from './Resume';
 import Theme from './Theme';
 import Minesweeper from './Minesweeper';
-import Winamp from './Winamp';
 import '../Styles/Taskbar.css'
 
 import { Inetcpl1315 } from '@react95/icons/esm/react/Inetcpl1315';

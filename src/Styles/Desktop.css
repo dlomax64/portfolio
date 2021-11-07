@@ -1,11 +1,12 @@
 .Desktop {
-  background-image: url("../Assets/sungrid.gif");
   /*
+  background-image: url("../Assets/sungrid.gif");
   background-image: url("../Assets/newBG.jpg");
-   */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+   */
+  background-color: #008080;
   --webkit-transform: rotateX(0);
   min-height: 100vh;
   position: absolute;
