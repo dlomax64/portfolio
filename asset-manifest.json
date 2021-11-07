@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.4973d790.chunk.css",
-    "main.js": "/static/js/main.b1ec3ac2.chunk.js",
-    "main.js.map": "/static/js/main.b1ec3ac2.chunk.js.map",
+    "main.css": "/static/css/main.8af25494.chunk.css",
+    "main.js": "/static/js/main.c0be4e71.chunk.js",
+    "main.js.map": "/static/js/main.c0be4e71.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.4d25e9c6.js",
     "runtime-main.js.map": "/static/js/runtime-main.4d25e9c6.js.map",
     "static/js/2.b8dcf16b.chunk.js": "/static/js/2.b8dcf16b.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.102a3aad.chunk.js": "/static/js/3.102a3aad.chunk.js",
     "static/js/3.102a3aad.chunk.js.map": "/static/js/3.102a3aad.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.4973d790.chunk.css.map": "/static/css/main.4973d790.chunk.css.map",
+    "static/css/main.8af25494.chunk.css.map": "/static/css/main.8af25494.chunk.css.map",
     "static/js/2.b8dcf16b.chunk.js.LICENSE.txt": "/static/js/2.b8dcf16b.chunk.js.LICENSE.txt",
     "static/media/MS-Sans-Serif.30dfad5d.eot": "/static/media/MS-Sans-Serif.30dfad5d.eot",
     "static/media/MS-Sans-Serif.4fb9ed0f.woff2": "/static/media/MS-Sans-Serif.4fb9ed0f.woff2",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.4d25e9c6.js",
     "static/js/2.b8dcf16b.chunk.js",
-    "static/css/main.4973d790.chunk.css",
-    "static/js/main.b1ec3ac2.chunk.js"
+    "static/css/main.8af25494.chunk.css",
+    "static/js/main.c0be4e71.chunk.js"
   ]
 }
